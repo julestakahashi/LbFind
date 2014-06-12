@@ -1,0 +1,4 @@
+dev_trw_lb_find:
+    resource: "@DevTRWLbFindBundle/Resources/config/routing.yml"
+    prefix:   /
+

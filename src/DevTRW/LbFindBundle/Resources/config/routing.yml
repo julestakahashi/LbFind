@@ -1,0 +1,3 @@
+dev_trw_lb_find_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: DevTRWLbFindBundle:Default:index }

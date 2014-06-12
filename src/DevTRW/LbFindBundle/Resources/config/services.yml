@@ -1,0 +1,7 @@
+parameters:
+#    dev_trw_lb_find.example.class: DevTRW\LbFindBundle\Example
+
+services:
+#    dev_trw_lb_find.example:
+#        class: %dev_trw_lb_find.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

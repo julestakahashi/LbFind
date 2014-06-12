@@ -1,5 +1,5 @@
 <?php
-namespace DevTRW\LbFindBundle\Longboarder;
+namespace DevTRW\LbFindBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -32,7 +32,7 @@ class Longboarder
     protected $discipline;
 
     /**
-     * @ORM/Column(type="integer", nullable=true)
+     * @ORM\Column(type="integer", nullable=true)
      */
     protected $age;
 

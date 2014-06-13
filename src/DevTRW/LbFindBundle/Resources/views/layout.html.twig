@@ -8,62 +8,49 @@
     </title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     {% block stylesheets %}
-        <link rel="stylesheet" href="{{ asset('bundles/devtrwlbfind/css/main.css') }}" type="text/css" media="all" />
-    {% endblock %}
-    {% block javascripts %}
+        <link rel="stylesheet" href="{{ asset('bundles/devtrwlbfind/css/googlemaps.css') }}" type="text/css" media="all" />
     {% endblock %}
     <link rel="shortcut icon" href="{{ asset('bundles/devtrwlbfind/images/favicon.ico') }}" />
 </head>
 <body>
+    {% block javascripts %}
+        <script src="{{ asset("bundles/devtrwlbfind/js/googlemaps.js") }}"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwD1EanByNiHrLQiAwvIYmJJNU2kGCW3Q"></script>
+    {% endblock %}
 <div id="container">
     <div id="header">
         <div class="content">
             <h1><a href="{{ path('dev_trw_lb_find_longboarder') }}">
-                    <img src="{{ asset('bundles/devtrwlbfind/images/dogeboard.jpg') }}"/>
+                    <img src="{{ asset('bundles/devtrwlbfind/images/doge.png') }}"/>
                 </a></h1>
 
             <div id="sub_header">
-                <div class="post">
-                    <h2>Ask for people</h2>
-                    <div>
-                        <a href="{{ path('ens_job') }}">Add a Longboarder</a>
-                    </div>
-                </div>
-
                 <div class="search">
-                    <h2>Ask for a job</h2>
+                    <h2>Search</h2>
                     <form action="" method="get">
                         <input type="text" name="keywords" id="search_keywords" />
                         <input type="submit" value="search" />
                         <div class="help">
-                            Enter some keywords (city, country, position, ...)
+                            Enter some keywords (location, discipline, username, age...)
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-
-    <div id="content">
-        {% if app.session.hasFlash('notice') %}
-            <div class="flash_notice">
-                {{ app.session.flash('notice') }}
-            </div>
-        {% endif %}
-
-        {% if app.session.hasFlash('error') %}
-            <div class="flash_error">
-                {{ app.session.flash('error') }}
-            </div>
-        {% endif %}
-
-        <div class="content">
+      <div class="content">
             {% block content %}
             {% endblock %}
         </div>
     </div>
-
-
+    <div id="map_canvas"></div>
+<div class="body">
+    {% block body %}
+    {% endblock %}
 </div>
+</div>
+
+
 </body>
 </html>

@@ -16,16 +16,19 @@ class LoadLongboarderData implements FixtureInterface
         $longboarder1->setUsername("turdgoblin");
         $longboarder1->setLocation("Portland, Oreon");
         $longboarder1->setAge(90);
+        $longboarder1->setDiscipline("freestyle, downhill");
 
         $longboarder2 = new Longboarder();
         $longboarder2->setUsername("dingleberry");
         $longboarder2->setLocation("New York, New York");
         $longboarder2->setAge(80);
+        $longboarder2->setDiscipline("cruising");
 
         $longboarder3 = new Longboarder();
         $longboarder3->setUsername("Dogebooger");
         $longboarder3->setLocation("Anchorage, Alaska");
         $longboarder3->setAge(200);
+        $longboarder3->setDiscipline("dance, downhill");
 
         $em->persist($longboarder1);
         $em->persist($longboarder2);

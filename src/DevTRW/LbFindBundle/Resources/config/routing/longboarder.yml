@@ -1,30 +1,30 @@
-DevTRW_Lonboarder:
-    path:     /
-    defaults: { _controller: "DevTRWLbFindBundle:Longboarder:index" }
-
-DevTRW_Lonboarder_show:
+dev_trw_lb_find_longboarder_show:
     path:     /{id}/show
     defaults: { _controller: "DevTRWLbFindBundle:Longboarder:show" }
 
-DevTRW_Lonboarder_new:
-    path:     /new
-    defaults: { _controller: "DevTRWLbFindBundle:Longboarder:new" }
-
-DevTRW_Lonboarder_create:
-    path:     /create
-    defaults: { _controller: "DevTRWLbFindBundle:Longboarder:create" }
-    requirements: { _method: post }
-
-DevTRW_Lonboarder_edit:
+dev_trw_lb_find_longboarder_edit:
     path:     /{id}/edit
     defaults: { _controller: "DevTRWLbFindBundle:Longboarder:edit" }
 
-DevTRW_Lonboarder_update:
+dev_trw_lb_find_longboarder_update:
     path:     /{id}/update
     defaults: { _controller: "DevTRWLbFindBundle:Longboarder:update" }
     requirements: { _method: post|put }
 
-DevTRW_Lonboarder_delete:
+dev_trw_lb_find_longboarder_delete:
     path:     /{id}/delete
     defaults: { _controller: "DevTRWLbFindBundle:Longboarder:delete" }
     requirements: { _method: post|delete }
+
+dev_trw_lb_find_longboarder_new:
+    path:     /new
+    defaults: { _controller: "DevTRWLbFindBundle:Longboarder:new" }
+
+dev_trw_lb_find_longboarder_create:
+    path:     /create
+    defaults: { _controller: "DevTRWLbFindBundle:Longboarder:create" }
+    requirements: { _method: post }
+
+dev_trw_lb_find_longboarder:
+    path:     /
+    defaults: { _controller: "DevTRWLbFindBundle:Longboarder:index" }

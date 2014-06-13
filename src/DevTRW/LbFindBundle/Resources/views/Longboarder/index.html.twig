@@ -1,12 +1,11 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
-    <h1>Longboarder list</h1>
+    <h1>Longboarders in your area</h1>
 
     <table class="records_list">
         <thead>
             <tr>
-                <th>Id</th>
                 <th>Username</th>
                 <th>Location</th>
                 <th>Discipline</th>
@@ -17,18 +16,17 @@
         <tbody>
         {% for entity in entities %}
             <tr>
-                <td><a href="{{ path('DevTRW_Lonboarder_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
-                <td>{{ entity.username }}</td>
+                <td><a href="{{ path('dev_trw_lb_find_longboarder_show', { 'id': entity.id }) }}">{{ entity.username }}</a></td>
                 <td>{{ entity.location }}</td>
                 <td>{{ entity.discipline }}</td>
                 <td>{{ entity.age }}</td>
                 <td>
                 <ul>
                     <li>
-                        <a href="{{ path('DevTRW_Lonboarder_show', { 'id': entity.id }) }}">show</a>
+                        <a href="{{ path('dev_trw_lb_find_longboarder_show', { 'id': entity.id }) }}">show</a>
                     </li>
                     <li>
-                        <a href="{{ path('DevTRW_Lonboarder_edit', { 'id': entity.id }) }}">edit</a>
+                        <a href="{{ path('dev_trw_lb_find_longboarder_edit', { 'id': entity.id }) }}">edit</a>
                     </li>
                 </ul>
                 </td>
@@ -39,7 +37,7 @@
 
         <ul>
         <li>
-            <a href="{{ path('DevTRW_Lonboarder_new') }}">
+            <a href="{{ path('dev_trw_lb_find_longboarder_new') }}">
                 Create a new entry
             </a>
         </li>

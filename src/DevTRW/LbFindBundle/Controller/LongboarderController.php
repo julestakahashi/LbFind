@@ -44,7 +44,7 @@ class LongboarderController extends Controller
             $em->persist($entity);
             $em->flush();
 
-            return $this->redirect($this->generateUrl('DevTRW_Lonboarder_show', array('id' => $entity->getId())));
+            return $this->redirect($this->generateUrl('dev_trw_lb_find_longboarder_show', array('id' => $entity->getId())));
         }
 
         return $this->render('DevTRWLbFindBundle:Longboarder:new.html.twig', array(
@@ -63,7 +63,7 @@ class LongboarderController extends Controller
     private function createCreateForm(Longboarder $entity)
     {
         $form = $this->createForm(new LongboarderType(), $entity, array(
-            'action' => $this->generateUrl('DevTRW_Lonboarder_create'),
+            'action' => $this->generateUrl('dev_trw_lb_find_longboarder_create'),
             'method' => 'POST',
         ));
 
@@ -143,7 +143,7 @@ class LongboarderController extends Controller
     private function createEditForm(Longboarder $entity)
     {
         $form = $this->createForm(new LongboarderType(), $entity, array(
-            'action' => $this->generateUrl('DevTRW_Lonboarder_update', array('id' => $entity->getId())),
+            'action' => $this->generateUrl('dev_trw_lb_find_longboarder_update', array('id' => $entity->getId())),
             'method' => 'PUT',
         ));
 
@@ -172,7 +172,7 @@ class LongboarderController extends Controller
         if ($editForm->isValid()) {
             $em->flush();
 
-            return $this->redirect($this->generateUrl('DevTRW_Lonboarder_edit', array('id' => $id)));
+            return $this->redirect($this->generateUrl('dev_trw_lb_find_longboarder_edit', array('id' => $id)));
         }
 
         return $this->render('DevTRWLbFindBundle:Longboarder:edit.html.twig', array(
@@ -202,7 +202,7 @@ class LongboarderController extends Controller
             $em->flush();
         }
 
-        return $this->redirect($this->generateUrl('DevTRW_Lonboarder'));
+        return $this->redirect($this->generateUrl('dev_trw_lb_find_longboarder'));
     }
 
     /**
@@ -215,7 +215,7 @@ class LongboarderController extends Controller
     private function createDeleteForm($id)
     {
         return $this->createFormBuilder()
-            ->setAction($this->generateUrl('DevTRW_Lonboarder_delete', array('id' => $id)))
+            ->setAction($this->generateUrl('dev_trw_lb_find_longboarder_delete', array('id' => $id)))
             ->setMethod('DELETE')
             ->add('submit', 'submit', array('label' => 'Delete'))
             ->getForm()

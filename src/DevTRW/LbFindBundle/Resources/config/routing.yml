@@ -1,3 +1,7 @@
+dev_trb_lb_find_api:
+    resource: @DevTRWLbFindBundle/Resources/config/routing_api.yml
+    prefix: /api
+
 dev_trw_lb_find_longboarder:
     resource: "@DevTRWLbFindBundle/Resources/config/routing/longboarder.yml"
     prefix: /longboarder

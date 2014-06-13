@@ -25,6 +25,10 @@ dev_trw_lb_find_longboarder_create:
     defaults: { _controller: "DevTRWLbFindBundle:Longboarder:create" }
     requirements: { _method: post }
 
+dev_trw_lb_find_longboarders_list:
+    path: /list.json
+    defaults: { _controller: "DevTRWLbFindBundle:Api/Longboarder:list" }
+
 dev_trw_lb_find_longboarder:
     path:     /
     defaults: { _controller: "DevTRWLbFindBundle:Longboarder:index" }

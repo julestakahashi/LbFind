@@ -4,7 +4,7 @@ namespace DevTRW\LbFindBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="LongboarderRepository")
  * @ORM\Table(name="Longboarder")
  */
 class Longboarder

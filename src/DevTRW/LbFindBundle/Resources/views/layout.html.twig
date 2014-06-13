@@ -28,6 +28,11 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwD1EanByNiHrLQiAwvIYmJJNU2kGCW3Q"></script>
         <script src="{{ asset("bundles/devtrwlbfind/js/googlemaps.js") }}"></script>
+        <script>
+            $(function () {
+                drawLongboarderMap('{{ path('dev_trw_lb_find_longboarders_list') }}');
+            });
+        </script>
 
     {% endblock %}
 

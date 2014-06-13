@@ -20,11 +20,10 @@
         </testsuite>
     </testsuites>
 
-    <!--
     <php>
-        <server name="KERNEL_DIR" value="/path/to/your/app/" />
+        <server name="KERNEL_DIR" value="/Users/julestakahashi/src/julestakahashi/LbFind/app/" />
     </php>
-    -->
+
 
     <filter>
         <whitelist>

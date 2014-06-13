@@ -1,0 +1,3 @@
+lb_find_api_get_longboarders:
+    path: /longboarders.json
+    defaults: { _controller: "@DevTRWLbFindBundle:Api/Longboarder:list" }
